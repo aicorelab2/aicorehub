@@ -111,16 +111,14 @@ export function DatasetsPage() {
               relevant for current trends in AI, ML, and research.
             </li>
             <li className="datasets-link-item">
-              <a
-                href="https://drive.google.com/drive/folders/1335wW2jiWEnBy4ld5smhO01QmtKGJbCa?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/contact"
                 className="datasets-drive-link"
               >
                 View the complete dataset collection
                 <i className="fas fa-external-link-alt" style={{ marginLeft: '0.5rem', fontSize: '0.82rem' }}></i>
                 <span style={{ marginLeft: '0.3rem' }}>→</span>
-              </a>
+              </Link>
             </li>
           </ol>
         </div>

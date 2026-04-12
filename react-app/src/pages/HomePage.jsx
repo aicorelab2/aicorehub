@@ -3,7 +3,11 @@ import useTypingEffect from '../hooks/useTypingEffect';
 import Footer from '../components/Footer';
 
 export default function HomePage() {
-  const typedText = useTypingEffect(["Data.", "Models.", "Intelligence.", "Systems."]);
+  const typedText = useTypingEffect([
+    "Data. Models. Intelligence.",
+    "Research. Training. Deployment.",
+    "Agents. RAG. Pipelines."
+  ]);
 
   return (
     <div className="page active" id="page-home">

@@ -100,11 +100,11 @@ export default function ContactPage() {
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="cf-name">Your Name</label>
-                  <input type="text" id="cf-name" name="name" placeholder="John Doe" required value={form.name} onChange={handleChange} />
+                  <input type="text" id="cf-name" name="name" placeholder="Enter your name" required value={form.name} onChange={handleChange} />
                 </div>
                 <div className="form-group">
                   <label htmlFor="cf-email">Email Address</label>
-                  <input type="email" id="cf-email" name="email" placeholder="you@example.com" required value={form.email} onChange={handleChange} />
+                  <input type="email" id="cf-email" name="email" placeholder="Enter your email" required value={form.email} onChange={handleChange} />
                 </div>
               </div>
               <div className="form-group">
@@ -120,7 +120,7 @@ export default function ContactPage() {
               </div>
               <div className="form-group">
                 <label htmlFor="cf-msg">Message</label>
-                <textarea id="cf-msg" name="msg" rows="5" placeholder="Tell me about your project, idea, or question... You can also mention which project repo you need access to (Brain Disorder Classification / Medical Image Classification)." required value={form.msg} onChange={handleChange}></textarea>
+                <textarea id="cf-msg" name="msg" rows="5" placeholder="Tell me about your project, idea, or question... You can also mention which project repo you need access to..." required value={form.msg} onChange={handleChange}></textarea>
               </div>
               <button type="submit" className="btn-submit" disabled={sending}>
                 {sending

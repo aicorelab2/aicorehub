@@ -16,7 +16,7 @@ export default function useTypingEffect(phrases = ["Data.", "Models.", "Intellig
         ci.current++;
         if (ci.current === phrase.length) {
           deleting.current = true;
-          timer = setTimeout(typeLoop, 2000);
+          timer = setTimeout(typeLoop, 1800);
           return;
         }
       } else {
@@ -27,7 +27,7 @@ export default function useTypingEffect(phrases = ["Data.", "Models.", "Intellig
           pi.current = (pi.current + 1) % phrases.length;
         }
       }
-      timer = setTimeout(typeLoop, deleting.current ? 45 : 95);
+      timer = setTimeout(typeLoop, deleting.current ? 25 : 55);
     }
 
     timer = setTimeout(typeLoop, 500);
