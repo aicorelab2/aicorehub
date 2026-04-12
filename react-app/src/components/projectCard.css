@@ -1,0 +1,155 @@
+/* Minimal Project Cards */
+.min-project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+}
+
+.min-project-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 10px 40px -10px rgba(34, 197, 94, 0.1);
+}
+
+.min-project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.min-project-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.min-project-metric {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.min-project-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.min-project-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.min-project-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+.min-project-highlights li::before {
+  content: '→';
+  color: #22c55e;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+.min-project-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.min-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.min-project-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.min-project-cta {
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.min-project-cta span {
+  transition: transform 0.3s ease;
+}
+
+.min-project-card:hover .min-project-cta {
+  opacity: 1;
+  transform: translateX(0);
+  color: #22c55e;
+}
+
+.min-project-card:hover .min-project-cta span {
+  transform: translateX(4px);
+}
+
+/* Vertical list layout for projects */
+.projects-vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .min-project-top {
+    flex-direction: column;
+  }
+  .min-project-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .min-project-cta {
+    opacity: 1;
+    transform: none;
+    color: #22c55e;
+  }
+}
