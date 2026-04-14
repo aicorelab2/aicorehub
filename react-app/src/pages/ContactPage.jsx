@@ -5,24 +5,42 @@ import Footer from '../components/Footer';
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({ name: '', email: '', subject: '', github: '', msg: '' });
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
+    if (error) setError('');
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+
       setSubmitted(true);
-    }, 1400);
+    } catch (err) {
+      setError(err.message || 'Failed to send. Please try again.');
+    } finally {
+      setSending(false);
+    }
   }
 
   function resetForm() {
     setForm({ name: '', email: '', subject: '', github: '', msg: '' });
     setSubmitted(false);
+    setError('');
   }
 
   return (
@@ -49,7 +67,6 @@ export default function ContactPage() {
             </p>
           </div>
 
-
           <div>
             <p style={{ fontSize: '.75rem', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '.8rem' }}>
               Find me on
@@ -63,21 +80,13 @@ export default function ContactPage() {
 
         {/* RIGHT — form */}
         <div className="form-card">
-          {/* Personal contact details */}
           <div className="contact-personal-details">
             <div className="contact-detail-row">
               <span className="contact-detail-label">CONTACT EMAIL</span>
-              <a
-                className="contact-detail-value"
-                href="mailto:aicorelab2@gmail.com"
-              >
+              <a className="contact-detail-value" href="mailto:aicorelab2@gmail.com">
                 aicorelab2@gmail.com
               </a>
             </div>
-            {/* <div className="contact-detail-row">
-              <span className="contact-detail-label">PHONE</span>
-              <span className="contact-detail-value contact-detail-mono">6366270971</span>
-            </div> */}
           </div>
           <div className="contact-details-separator"></div>
 
@@ -122,6 +131,24 @@ export default function ContactPage() {
                 <label htmlFor="cf-msg">Message</label>
                 <textarea id="cf-msg" name="msg" rows="5" placeholder="Tell me about your project, idea, or question... You can also mention which project repo you need access to..." required value={form.msg} onChange={handleChange}></textarea>
               </div>
+
+              {/* Error message */}
+              {error && (
+                <div style={{
+                  background: 'rgba(239,68,68,0.1)',
+                  border: '1px solid rgba(239,68,68,0.4)',
+                  borderRadius: '6px',
+                  padding: '10px 14px',
+                  marginBottom: '12px',
+                  fontSize: '0.82rem',
+                  color: '#f87171',
+                  fontFamily: "'JetBrains Mono', monospace",
+                }}>
+                  <i className="fas fa-exclamation-circle" style={{ marginRight: '8px' }}></i>
+                  {error}
+                </div>
+              )}
+
               <button type="submit" className="btn-submit" disabled={sending}>
                 {sending
                   ? <><i className="fas fa-spinner fa-spin"></i> Sending...</>
