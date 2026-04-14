@@ -124,14 +124,14 @@ export default function ContactPage() {
               </div>
               <div className="form-group">
                 <label htmlFor="cf-github">GitHub Username <span style={{ color: 'var(--muted)', fontWeight: 400, fontSize: '0.78em' }}>(optional)</span></label>
-                <input type="text" id="cf-github" name="github" placeholder="github.com/yourusername" value={form.github} onChange={handleChange} />
+                <input type="text" id="cf-github" name="githubUsername" placeholder="github.com/yourusername" value={form.githubUsername} onChange={handleChange} />
                 <small style={{ display: 'block', marginTop: '0.35rem', fontSize: '0.72rem', color: 'rgba(255,255,255,0.35)', fontFamily: "'JetBrains Mono', monospace" }}>
                   Add your GitHub username if you're requesting repository access.
                 </small>
               </div>
               <div className="form-group">
                 <label htmlFor="cf-msg">Message</label>
-                <textarea id="cf-msg" name="msg" rows="5" placeholder="Tell me about your project, idea, or question... You can also mention which project repo you need access to..." required value={form.msg} onChange={handleChange}></textarea>
+                <textarea id="cf-msg" name="message" rows="5" placeholder="Tell me about your project, idea, or question... You can also mention which project repo you need access to..." required value={form.message} onChange={handleChange}></textarea>
               </div>
 
               {/* Error message */}
