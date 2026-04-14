@@ -6,7 +6,8 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
-  const [form, setForm] = useState({ name: '', email: '', subject: '', github: '', msg: '' });
+  //const [form, setForm] = useState({ name: '', email: '', subject: '', github: '', msg: '' });
+  const [form, setForm] = useState({ name: '', email: '', subject: '', githubUsername: '', message: '' });
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -38,7 +39,8 @@ export default function ContactPage() {
   }
 
   function resetForm() {
-    setForm({ name: '', email: '', subject: '', github: '', msg: '' });
+    //setForm({ name: '', email: '', subject: '', github: '', msg: '' });
+    setForm({ name: '', email: '', subject: '', githubUsername: '', message: '' });
     setSubmitted(false);
     setError('');
   }
