@@ -24,7 +24,6 @@ export default function HomePage() {
         </div>
         <div className="hp-hero-ctas">
           <Link to="/ai-lab" className="btn btn-c hp-hero-btn">Explore Lab</Link>
-          <Link to="/projects" className="hp-hero-btn-alt">View Projects</Link>
         </div>
       </div>
 
@@ -166,13 +165,6 @@ export default function HomePage() {
               </div>
               <i className="fas fa-arrow-right hp-res-icon"></i>
            </Link>
-           <Link to="/blogs" className="hp-res-item">
-              <div className="hp-res-text">
-                <span className="hp-res-name">Blogs</span>
-                <span className="hp-res-desc">Deep-dives into AI engineering and insights.</span>
-              </div>
-              <i className="fas fa-arrow-right hp-res-icon"></i>
-           </Link>
          </div>
       </div>
 
@@ -182,7 +174,6 @@ export default function HomePage() {
         <h2>Let's build intelligent systems together.</h2>
         <div className="hp-hero-ctas">
           <Link to="/contact" className="btn btn-c hp-hero-btn">Get in Touch</Link>
-          <Link to="/services" className="hp-hero-btn-alt">View Work</Link>
         </div>
       </div>
 

@@ -331,56 +331,6 @@ export function DocsPage() {
   );
 }
 
-export function BlogsPage() {
-  return (
-    <div className="page active" id="page-blogs">
-      {/* PAGE HEADER */}
-      <div className="page-hero">
-        <div className="page-hero-left">
-          <h1 style={{
-            fontSize: '2.4rem',
-            textTransform: 'uppercase',
-            letterSpacing: '3px',
-            fontFamily: "'JetBrains Mono', monospace",
-            color: '#22C55E',
-          }}>
-            BLOGS
-          </h1>
-          <p style={{
-            color: 'rgba(255,255,255,0.55)',
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: '0.88rem',
-            marginTop: '0.5rem',
-            lineHeight: '1.7',
-            maxWidth: '600px',
-          }}>
-            Thoughts, breakdowns, and deep-dives on AI, ML, Research, and everything in between.
-          </p>
-        </div>
-        <Link className="back-btn" to="/">
-          <i className="fas fa-arrow-left"></i> Back to Home
-        </Link>
-      </div>
-
-      <div className="divider"></div>
-
-      {/* MAIN CONTENT */}
-      <div className="section" style={{ paddingTop: '3rem' }}>
-        <div className="blogs-coming-card">
-          <p className="blogs-coming-text">
-            We are currently crafting in-depth articles, tutorials, and research breakdowns.
-            Check back soon — the lab notes are coming.
-          </p>
-          <p className="blogs-coming-topics">
-            Topics will cover: Generative AI &middot; RAG &middot; LLM Fine-Tuning &middot; AI Agents &middot; Data Science &middot; Research Paper Walkthroughs
-          </p>
-        </div>
-      </div>
-
-      <Footer />
-    </div>
-  );
-}
 
 export function ResearchPage() {
   return (

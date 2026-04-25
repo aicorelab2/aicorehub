@@ -2,9 +2,8 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
-import { ProjectsPage, DatasetsPage, AiLabPage, DocsPage, BlogsPage, ResearchPage } from './pages/ContentPages';
+import { ProjectsPage, DatasetsPage, AiLabPage, DocsPage, ResearchPage } from './pages/ContentPages';
 import ContactPage from './pages/ContactPage';
-import ServicesPage from './pages/ServicesPage';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -35,8 +34,6 @@ export default function App() {
         <Route path="/ai-lab" element={<AiLabPage />} />
         <Route path="/docs" element={<DocsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/research" element={<ResearchPage />} />
       </Routes>
     </>

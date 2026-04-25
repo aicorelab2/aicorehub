@@ -7,13 +7,11 @@ export default function Nav() {
 
   const allItems = [
     { id: '',          label: 'HOME' },
-    { id: 'services',  label: 'SERVICES' },
     { id: 'ai-lab',    label: 'AI LAB' },
     { id: 'research',  label: 'RESEARCH' },
     { id: 'projects',  label: 'PROJECTS' },
     { id: 'docs',      label: 'DOCS' },
     { id: 'datasets',  label: 'DATASETS' },
-    { id: 'blogs',     label: 'BLOGS' },
     { id: 'contact',   label: 'CONTACT' },
   ];
 

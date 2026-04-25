@@ -14,14 +14,12 @@ export default function Footer() {
           <Link to="/ai-lab">AI Lab</Link>
           <Link to="/research">Research</Link>
           <Link to="/projects">Projects</Link>
-          <Link to="/services">Services</Link>
         </div>
 
         <div className="hp-footer-links">
           <h4>Resources</h4>
           <Link to="/docs">Docs</Link>
           <Link to="/datasets">Datasets</Link>
-          <Link to="/blogs">Blogs</Link>
           <Link to="/contact">Contact</Link>
         </div>
 
