@@ -1,0 +1,560 @@
+/* experience-linear.css - Custom Theme aligned with global aicore.lab styles */
+.exp-page {
+  background-color: var(--bg);
+  color: var(--main);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
+.exp-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* HERO */
+.exp-hero {
+  padding: 8rem 0 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 5rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.exp-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.exp-hero h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.exp-hero p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.exp-hero-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.exp-btn-primary {
+  background: var(--cyan);
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.exp-btn-primary:hover {
+  background: var(--purple);
+  transform: translateY(-1px);
+}
+
+.exp-btn-secondary {
+  background: rgba(34, 197, 94, 0.05);
+  color: var(--cyan);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.exp-btn-secondary:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: var(--cyan);
+}
+
+/* SECTION HEADER */
+.exp-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+.exp-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.2), transparent);
+}
+
+/* TIMELINE / ROLE CARDS */
+.exp-role-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(34, 197, 94, 0.15);
+  border-left: 3px solid var(--cyan);
+  border-radius: 12px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.exp-role-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.exp-role-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.exp-role-card:hover {
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: var(--cglow);
+}
+
+/* Subtle gradient blur at top */
+.exp-role-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: radial-gradient(ellipse at 50% -20%, rgba(34, 197, 94, 0.05), transparent 70%);
+  pointer-events: none;
+}
+
+.exp-role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exp-role-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--main);
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.exp-role-company {
+  font-size: 0.95rem;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.exp-role-date {
+  font-size: 0.8rem;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--main);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.exp-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.exp-list strong {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* PROJECTS (Nested inside Roles) */
+.exp-projects-header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.exp-projects-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.exp-project {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.exp-project:hover {
+  border-color: rgba(34, 197, 94, 0.2);
+  border-left-color: var(--cyan);
+  background: rgba(34, 197, 94, 0.02);
+}
+
+.exp-project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--main);
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.exp-project-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Tech Pills */
+.exp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.exp-pill {
+  font-size: 0.7rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.exp-pill:hover {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: var(--cyan);
+}
+
+/* Grid Layouts for Project Details */
+.exp-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.exp-col h4 {
+  font-size: 0.85rem;
+  color: var(--cyan);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exp-col p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Architecture Mini-Diagrams (Clean tables) */
+.exp-arch {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(2, 6, 23, 0.5);
+  font-size: 0.8rem;
+}
+
+.exp-arch-header {
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--cyan);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exp-arch-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.exp-arch-col {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exp-arch-col:last-child {
+  border-right: none;
+}
+
+.exp-arch-col-title {
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--main);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exp-arch-col-body {
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.8;
+  font-size: 0.75rem;
+}
+
+/* Feature/Metric Cards */
+.exp-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.exp-metric-card {
+  padding: 1.5rem;
+  background: rgba(34, 197, 94, 0.02);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.exp-metric-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--cyan);
+  margin-bottom: 0.25rem;
+}
+
+.exp-metric-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Flow Arrows for Architecture */
+.exp-arch-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: rgba(2, 6, 23, 0.5);
+  overflow-x: auto;
+}
+
+.exp-arch-box {
+  flex: 1;
+  min-width: 140px;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.exp-arch-arrow {
+  color: var(--muted);
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+.exp-arch-box-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.exp-arch-box-body {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Additional Tech Section */
+.exp-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.exp-tech-item {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.exp-tech-item:hover {
+  background: rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.exp-tech-item-title {
+  color: var(--cyan);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exp-tech-item-desc {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .exp-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .exp-role-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exp-arch-flow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exp-arch-arrow {
+    transform: rotate(90deg);
+  }
+
+  .exp-arch-grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+  }
+
+  .exp-arch-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .exp-role-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .exp-project {
+    padding: 1.5rem;
+  }
+
+  .exp-hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .exp-hero h1 {
+    font-size: 2.5rem;
+  }
+}

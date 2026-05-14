@@ -1,35 +1,41 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './projectCard.css';
 
-export default function ProjectCard({ project, onClick }) {
+export default function ProjectCard({ project }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-project-card" onClick={() => onClick && onClick(project)}>
+    <div className="min-project-card" onClick={() => navigate('/contact')}>
       <div className="min-project-top">
-        <div>
-          <h3 className="min-project-title">{project.title}</h3>
-          <p className="min-project-desc">{project.desc}</p>
-        </div>
-        {project.keyMetric && (
-          <div className="min-project-metric">{project.keyMetric}</div>
+        <h3 className="min-project-title">{project.title}</h3>
+        <p className="min-project-desc">{project.desc}</p>
+        {project.dataset && (
+          <p className="min-project-dataset">
+            <i className="fas fa-database"></i> Dataset:{" "}
+            <a
+              href={project.datasetUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="min-project-dataset-link"
+            >
+              {project.dataset}
+            </a>
+          </p>
         )}
       </div>
 
-      {project.shortHighlights && project.shortHighlights.length > 0 && (
-        <ul className="min-project-highlights">
-          {project.shortHighlights.map((hl, idx) => (
-            <li key={idx}>{hl}</li>
-          ))}
-        </ul>
-      )}
-
       <div className="min-project-bottom">
         <div className="min-project-tags">
-          {(project.tags || []).slice(0, 4).map((tag, idx) => (
-            <span key={idx} className="min-project-tag">{tag}</span>
+          {project.tags.map((tag) => (
+            <span key={tag} className="min-project-tag">
+              {tag}
+            </span>
           ))}
         </div>
         <div className="min-project-cta">
-          View Details <span>→</span>
+          Request Access <span>→</span>
         </div>
       </div>
     </div>

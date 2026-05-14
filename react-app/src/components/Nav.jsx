@@ -6,13 +6,12 @@ export default function Nav() {
   const { pathname, hash } = useLocation();
 
   const allItems = [
-    { id: '',          label: 'HOME' },
-    { id: 'ai-lab',    label: 'AI LAB' },
-    { id: 'research',  label: 'RESEARCH' },
-    { id: 'projects',  label: 'PROJECTS' },
-    { id: 'docs',      label: 'DOCS' },
-    { id: 'datasets',  label: 'DATASETS' },
-    { id: 'contact',   label: 'CONTACT' },
+    { id: '', label: 'HOME' },
+    { id: 'experience', label: 'EXPERIENCE' },
+    { id: 'projects', label: 'PROJECTS' },
+    { id: 'research', label: 'RESEARCH' },
+    { id: 'cortexzen', label: 'CORTEXZEN AI' },
+    { id: 'contact', label: 'CONTACT' },
   ];
 
   function isActive(id) {
@@ -27,32 +26,34 @@ export default function Nav() {
   return (
     <>
       <nav>
-        <Link className="logo" to="/">
-          aicore.lab
-        </Link>
+        <div className="nav-container">
+          <Link className="logo" to="/">
+            Valmiki Sarath Kumar
+          </Link>
 
-        {/* Desktop + Tablet: horizontal scrollable row */}
-        <div className="nav-links">
-          {allItems.map((item) => (
-            <Link
-              key={item.id}
-              id={`nav-${item.id.replace('#', '')}`}
-              className={isActive(item.id) ? 'active' : ''}
-              to={`/${item.id}`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {/* Desktop + Tablet: horizontal links */}
+          <div className="nav-links">
+            {allItems.map((item) => (
+              <Link
+                key={item.id}
+                id={`nav-${item.id.replace('#', '')}`}
+                className={isActive(item.id) ? 'active' : ''}
+                to={`/${item.id}`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile: hamburger */}
+          <button
+            className="nav-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            &#8801;
+          </button>
         </div>
-
-        {/* Mobile: hamburger */}
-        <button
-          className="nav-hamburger"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          &#8801;
-        </button>
       </nav>
 
       {/* Full-screen mobile menu */}

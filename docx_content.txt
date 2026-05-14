@@ -1,0 +1,231 @@
+AI ENGINEERING
+Portfolio
+End-to-End AI Systems  ·  RAG  ·  LangGraph  ·  LangChain  ·  NLP  ·  LLM Optimization
+4 Projects  ·  Full Stack AI Engineer
+
+RAG Pipeline
+LangGraph
+LangChain
+NLP Filtering
+LLM Agents
+FastAPI
+MongoDB
+CI/CD
+Embeddings
+Vector Search
+Semantic Ranking
+Intent ID
+
+
+PROJECT 01  —  AIBER  |  Pharmaceutical Intelligence Database
+
+⭐ SITUATION
+The organization needed to build a structured intelligence database for pharmaceutical and drug companies by extracting relevant business information directly from their websites. These websites contained thousands of pages with massive, unstructured, and noisy content — making manual data collection completely infeasible at scale.
+
+📋 TASK
+Design and deliver an end-to-end automated data pipeline — from web scraping through intelligent categorization — that could extract, clean, filter, and categorize web content accurately according to business requirements, with minimal manual involvement.
+
+🚀 ACTION
+Pipeline Architecture
+
+Web Scraping
+Preprocessing
+NLP Filter Layer
+RAG Pipeline
+Categorization
+• Playwright
+• Selenium
+• BeautifulSoup
+• Scrapy
+• Noise Removal
+• Data Cleaning
+• Normalization
+• Link Filtering
+• Business Relevance
+• Page Reduction
+• Chunking (10-15 tested)
+• Embeddings
+• Vector Search
+• LLM Output
+• Business Categories
+• Structured DB
+
+Key technical decisions:
+Explored and benchmarked Playwright, Selenium, BeautifulSoup, and Scrapy — combined 2–3 methodologies to maximize extraction accuracy
+Implemented NLP-based filtering layer to reduce irrelevant web pages from thousands of links per website
+Integrated RAG architecture to prevent LLM hallucinations and manage context window limitations
+Benchmarked and tested multiple embedding models varying in dimensions and token capacities
+Experimented with 10–15 different chunking strategies to optimize RAG performance
+
+🏆  Reduced manual processing by 60–70% · Optimized RAG pipeline with best-fit chunking & embedding model · Built scalable pharma intelligence database
+
+Technologies Used:
+Playwright
+Selenium
+BeautifulSoup
+Scrapy
+RAG
+Vector Embeddings
+NLP Filtering
+LLM
+
+
+PROJECT 02  —  SYNTRA  |  Role-Based AI Chatbot for Manufacturing & Delivery
+
+⭐ SITUATION
+SYNTRA is a manufacturing-to-delivery management platform where admins and mediators were managing the entire operational workflow — from raw materials through to final delivery — manually through the website, causing significant inefficiencies and high operational overhead.
+
+📋 TASK
+Design and build an intelligent, role-aware chatbot that could replicate and automate majority of manual website operations through conversational interface, with strict role-based access control across CEO, Manager, and Worker levels.
+
+🚀 ACTION
+System Architecture
+
+USER ROLES
+👔 CEO Level
+🧑‍💼 Manager Level
+👷 Worker Level
+RBAC Auth
+→
+AI CHATBOT
+Intent Identification
+Confirmation Engine
+File Upload Support
+Conversational History
+→
+LANGGRAPH
+Graph Orchestration
+RAG Pipeline
+Tool Assignment
+100+ APIs Managed
+→
+PLATFORM APIs
+Manufacturing
+Delivery Tracking
+Inventory Mgmt
+Order Processing
+
+⚡ Tech Migration
+LangChain Agents → LangGraph
+Reason: Better orchestration for 100+ APIs across multi-category manufacturing workflows
+🏆 Result
+Automated majority of manual operations · Secure RBAC chatbot · Scalable 100+ API routing
+
+Technologies Used:
+LangGraph
+LangChain
+RAG
+Intent ID
+RBAC Auth
+FastAPI
+Conversational Memory
+Tool Agents
+
+
+PROJECT 03  —  Skill Gap Analysis & Training Automation Platform
+
+⭐ SITUATION
+When employees join a company they carry skill gaps — a mismatch between role-required skills and their current skills. The process of identifying gaps, assigning courses, and tracking learning progress was entirely manual — slow, inconsistent, and unscalable.
+
+📋 TASK
+Build an end-to-end automated skill gap analysis and training assignment platform integrating with Workday, scraping courses from Coursera, and providing individual dashboards and an HR admin panel.
+
+🚀 ACTION
+End-to-End Platform Flow
+
+Employee Profile
+Skill Gap Engine
+Course Recommender
+Dashboards & Chat
+• Workday API
+• FastAPI + SOAP
+• Existing Skills
+• Required Skills
+• vs Existing Skills
+• Gap Mapping
+• Coursera Scraping
+• Embeddings
+• Semantic Ranking
+• Individual Dashboards
+• HR Admin Panel
+• AI Chatbot
+
+Workday integration via FastAPI + SOAP APIs to fetch live employee skill data
+Open-source skill taxonomy research to enrich skill definitions and role mappings
+Custom FastAPI backend connecting skill engine, dashboards, and chatbot
+Coursera web scraper extracting course titles, skills, and metadata for free course recommendations
+Vector embeddings + semantic ranking for intelligent course-to-skill-gap matching
+HR admin dashboard with full CRUD on skills, courses, and employee assignments
+
+Degreed
+SAP SuccessFactors
+Viva Learning
+Lightcast
+Workday
+Benchmarked against these industry leaders to ensure enterprise-grade quality
+
+🏆  Fully automated skill gap detection · Semantic course matching via embeddings · Individual dashboards · HR admin control panel
+
+
+CONTRIBUTION  —  JSON Chunking & LLM Cost Optimization
+
+❌  THE PROBLEM
+✅  THE SOLUTION
+• 2,000 lines of JSON per employee
+• Entire JSON sent to LLM every query
+• Context window overflow + token overload
+• High hallucination rate
+• Excessive API cost
+• JSON Chunking Strategy for nested structures
+• Query-aware selective retrieval
+• Minimum tokens fed to LLM
+• Conversational History Management
+• LLM Agent Tool Assignment
+• Low-cost optimization mindset
+
+↓ 70%
+Token Usage Reduced
+↓ 60%
+Hallucination Rate
+100+
+APIs Managed Efficiently
+✓
+Cost-Efficient Architecture
+
+
+ADDITIONAL TECHNICAL EXPERIENCE
+
+MongoDB
+Data modeling, storage, retrieval & querying for large-scale AI pipelines handling high-volume unstructured data
+NL-to-SQL
+Natural language to SQL query generation — enabling non-technical users to extract data insights through plain language queries
+Python Code Gen
+LLM-based Python code generation for automated, on-demand code outputs within AI-powered platforms
+CI/CD & Git
+Version control, automated build pipelines, and continuous deployment workflows across all project deliveries
+
+
+SUMMARY  —  Key Achievements & Core Competencies
+
+60–70%
+Manual Processing Reduced (AIBER)
+100+
+APIs Orchestrated (SYNTRA)
+10–15
+Chunking Strategies Tested
+4
+End-to-End Projects Delivered
+
+Core Competencies
+End-to-End AI Systems
+RAG & Agentic RAG
+LangGraph Orchestration
+LLM Cost Optimization
+NLP Pipelines
+Web Scraping
+Embedding Models
+FastAPI Development
+MongoDB
+CI/CD & Git
+Role-Based Auth
+Semantic Ranking
